@@ -46,3 +46,7 @@ Merupakan node pengguna akhir yang berinteraksi dengan sistem, termasuk:
 
 
 ![image](https://github.com/user-attachments/assets/7baf7be9-abed-42c6-9050-5fb303b6e6cb)
+
+
+<img width="861" alt="Screenshot 2025-03-23 at 15 45 17" src="https://github.com/user-attachments/assets/5e298b6d-ad53-4bd8-89e6-96a41c1adc38" />
+

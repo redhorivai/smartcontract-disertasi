@@ -43,4 +43,6 @@ Merupakan node pengguna akhir yang berinteraksi dengan sistem, termasuk:
 •	Smart contracts mengelola transaksi berdasarkan aturan yang telah ditetapkan.
 •	Blockchain node berfungsi sebagai pusat validasi dan penyimpanan data.
 •	Consensus module (PoS) memastikan bahwa hanya transaksi yang valid yang ditambahkan ke blockchain.
+
+
 ![image](https://github.com/user-attachments/assets/7baf7be9-abed-42c6-9050-5fb303b6e6cb)

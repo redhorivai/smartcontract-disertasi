@@ -1,52 +1,54 @@
-# smartcontract-disertasi
-Modul smart contract di blockchain Node
+# CodeIgniter 4 Framework
 
- 
-Referensi (Li Luo; J Zhou, 2021 – Computer Communication)
- 
-Gambar BlockFertilizer System Architecture
+## What is CodeIgniter?
 
-1.	Blockchain Node
-Bagian inti dari sistem yang menangani eksekusi dan penyimpanan transaksi dalam blockchain. Terdiri dari beberapa modul utama:
-a.	Smart Fertilizer Interfaces
-Berfungsi sebagai antarmuka yang menghubungkan pengguna dengan sistem. Fitur yang tersedia meliputi:
-•	Adding a New Invoice → Menambahkan faktur baru ke dalam sistem.
-•	Show Quota → Menampilkan sisa kuota pupuk bersubsidi.
-•	User Management → Mengelola pengguna dalam sistem.
-•	Purchasing Fertilizer → Fitur pembelian pupuk.
-b.	Smart Contract Module
-Menangani eksekusi transaksi berbasis smart contract, terdiri dari dua bagian:
-•	Smart Contract Module (Transaction) → Bertanggung jawab atas transaksi berbasis smart contract.
-•	Smart Contract Module (SPJB) → Mungkin terkait dengan pengelolaan Surat Perjanjian Jual Beli (SPJB) dalam distribusi pupuk.
-c.	Consensus Module – PoS (Proof of Stake)
-Pada sistem BlockFertilizer, Consensus Module - Proof of Stake (PoS) digunakan untuk mencapai kesepakatan dalam jaringan blockchain, yang berarti bahwa setiap transaksi yang masuk tidak langsung dianggap valid, tetapi harus diverifikasi oleh node dalam jaringan melalui mekanisme PoS.
-d.	Data Management Module
-Bertanggung jawab atas pengelolaan data yang tersimpan dalam blockchain, memastikan data transaksi aman dan dapat diakses oleh pengguna yang berwenang.
-e.	Data Comunnication Module
-Mengatur komunikasi antar node dalam jaringan blockchain, memungkinkan pertukaran informasi yang aman dan cepat.
+CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
+More information can be found at the [official site](https://codeigniter.com).
 
-2.	Fitur Pendukung Blockchain
-Komponen tambahan yang mendukung operasi blockchain, termasuk:
-•	Blockchain Status Management → Mengawasi status blockchain.
-•	Transaction Pool Management → Mengelola antrean transaksi yang menunggu validasi.
-•	Account Status Management → Memantau status akun dalam sistem.
-3.	End-User Nodes
-Merupakan node pengguna akhir yang berinteraksi dengan sistem, termasuk:
-•	Subsidi Fertilizer Redemption → Proses penebusan pupuk bersubsidi.
-•	Remaining Fertilizer Quota → Mengecek sisa kuota pupuk bersubsidi.
-•	Invoicing → Pengelolaan faktur transaksi.
-•	Region → Pengaturan berdasarkan wilayah distribusi.
-•	Sales Realization → Memonitor realisasi penjualan pupuk.
-•	Approval → Proses persetujuan dalam sistem.
-4.	Interaksi Antar Komponen
-•	End-user nodes (produsen, distributor, pengecer dan  petani) mengakses sistem melalui Smart Fertilizer Interfaces.
-•	Smart contracts mengelola transaksi berdasarkan aturan yang telah ditetapkan.
-•	Blockchain node berfungsi sebagai pusat validasi dan penyimpanan data.
-•	Consensus module (PoS) memastikan bahwa hanya transaksi yang valid yang ditambahkan ke blockchain.
+This repository holds the distributable version of the framework.
+It has been built from the
+[development repository](https://github.com/codeigniter4/CodeIgniter4).
 
+More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
 
-![image](https://github.com/user-attachments/assets/7baf7be9-abed-42c6-9050-5fb303b6e6cb)
+The user guide corresponding to the latest version of the framework can be found
+[here](https://codeigniter4.github.io/userguide/).
 
+## Important Change with index.php
 
-<img width="861" alt="Screenshot 2025-03-23 at 15 45 17" src="https://github.com/user-attachments/assets/5e298b6d-ad53-4bd8-89e6-96a41c1adc38" />
+`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
+for better security and separation of components.
 
+This means that you should configure your web server to "point" to your project's *public* folder, and
+not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
+framework are exposed.
+
+**Please** read the user guide for a better explanation of how CI4 works!
+
+## Repository Management
+
+We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
+We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
+FEATURE REQUESTS.
+
+This repository is a "distribution" one, built by our release preparation script.
+Problems with it can be raised on our forum, or as issues in the main repository.
+
+## Contributing
+
+We welcome contributions from the community.
+
+Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+
+## Server Requirements
+
+PHP version 7.4 or higher is required, with the following extensions installed:
+
+- [intl](http://php.net/manual/en/intl.requirements.php)
+- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+
+Additionally, make sure that the following extensions are enabled in your PHP:
+
+- json (enabled by default - don't turn it off)
+- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
+- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library

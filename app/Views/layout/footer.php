@@ -1,3 +1,10 @@
 <footer class="footer text-center">
-    All Rights Reserved by Matrix-admin. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
+<div class="container">
+    <p class="text-center">Copyright <i>Smart Contract | Blockchain</i> &copy; 
+        <script>
+            var CurrentYear = new Date().getFullYear()
+            document.write(CurrentYear)
+        </script>
+    </p>
+</div>
 </footer>

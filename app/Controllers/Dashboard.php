@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Backend;
 
-class Home extends BaseController
+use App\Controllers\BaseController;
+
+class Dashboard extends BaseController
 {
     public function index()
     {

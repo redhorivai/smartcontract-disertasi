@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Backend\PenggunaModel;
+use App\Models\PenggunaModel;
 
 class Pengguna extends BaseController
 {
@@ -17,7 +17,7 @@ class Pengguna extends BaseController
     public function index()
     {
         $data = [
-            'title'  => 'Data Pengguna',
+            'title'  => 'DATA PENGGUNA',
             'active' => 'pengguna',
         ];
         return view('pengguna/index', $data);

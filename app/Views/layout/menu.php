@@ -5,11 +5,11 @@
         <nav class="sidebar-nav">
             <label style="padding: 10px;margin-bottom:-10px;margin-top:35px;">MENU NAVIGASI</label>
             <ul id="sidebarnav" class="p-t-30">
-                <li class="<?php if ($active == "dashboard") {
-                  echo "sidebar-item selected";
+                <li class="sidebar-item <?php if ($active == "dashboard") {
+                  echo "selected";
                 } ?>">
-                    <a class="<?php if ($active == "dashboard") {
-                  echo "sidebar-link waves-effect waves-dark sidebar-link active";
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link <?php if ($active == "dashboard") {
+                  echo "active";
                 } ?>" href="<?= base_url('/')?>" aria-expanded="false">
                     <i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Beranda</span>
                 </a>
@@ -23,8 +23,12 @@
                         <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span class="hide-menu">- Chat Option </span></a></li>
                     </ul>
                 </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="javascript:void(0)" aria-expanded="false">
+                <li class="sidebar-item <?php if ($active == "pengguna") {
+                  echo "selected";
+                } ?>">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link <?php if ($active == "pengguna") {
+                  echo "active";
+                } ?>" href="<?= base_url('pengguna')?>" aria-expanded="false">
                         <i class="mdi mdi-account"></i>
                         <span class="hide-menu">Data Pengguna</span>
                     </a>

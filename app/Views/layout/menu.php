@@ -29,7 +29,7 @@
                     <a class="sidebar-link waves-effect waves-dark sidebar-link <?php if ($active == "pengguna") {
                   echo "active";
                 } ?>" href="<?= base_url('pengguna')?>" aria-expanded="false">
-                        <i class="mdi mdi-account"></i>
+                        <i class="mdi mdi-account-multiple"></i>
                         <span class="hide-menu">Data Pengguna</span>
                     </a>
                 </li>

@@ -15,14 +15,11 @@
 <script src="<?= base_url(); ?>assets/library/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/pages/chart/chart-page-init.js"></script>
 <!-- this page js -->
-<script src="<?= base_url();?>assets/library/extra-libs/multicheck/datatable-checkbox-init.js"></script>
-<script src="<?= base_url();?>assets/library/extra-libs/multicheck/jquery.multicheck.js"></script>
-<script src="<?= base_url();?>assets/library/extra-libs/DataTables/datatables.min.js"></script>
 
 
-<script>
-    /****************************************
-     *       Basic Table                   *
-     ****************************************/
-    $('#zero_config').DataTable();
-</script>
+<?php
+if ($active == 'pengguna') {
+    echo view ('pengguna/js.php');
+}
+
+?>

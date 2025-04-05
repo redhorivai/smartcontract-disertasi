@@ -14,6 +14,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/style.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/library/libs/flot/css/float-chart.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/library/extra-libs/multicheck/multicheck.css">
+    <link href="<?= base_url(); ?>assets/library/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
 
 </head>
 

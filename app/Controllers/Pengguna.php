@@ -45,10 +45,20 @@ class Pengguna extends BaseController
 
     public function getData()
     {
-        $res = $this->m_pengguna->getPengguna();
+        $res = $this->m_pengguna->getPerson();
         // print_r($res);
         if (count($res) > 0) {
             foreach ($res as $data) {
+                if ($data->jenis_kelamin == 'L') {
+                    $jk = 'Laki-laki';
+                } else {
+                    $jk = 'Perempuan';
+                }
+                if ($data->is_active == 'active') {
+                    $status = 'aktif';
+                } else {
+                    $status = 'tidak aktif';
+                }
                 $output[] = array(
                     'cek'   => "<div>
                                 <label class='customcheckbox'>
@@ -56,7 +66,15 @@ class Pengguna extends BaseController
                                 <span class='checkmark'></span>
                                 </label>
                                 </div>",
-                    'col'   => "$data->email",
+                    'col'   => "<div>
+                                <div>$data->nama_lengkap</div>
+                                <div>$data->nik</div>
+                                <div>$jk</div>
+                                <div>$data->nik</div>
+                                <div>$data->email</div>
+                                <div>$data->alamat</div>
+                                <div>$status</div>
+                                </div>",
                     'action' => "<div style='text-align: center;'><div class='btn-group'>
                                 <span style='padding-right:10px;'><button type='button' class='btn btn-outline-danger btn-sm'><i class='m-r-20 mdi mdi-account-off'></i></button></span>
                                 <button type='button' class='btn btn-info btn-sm dropdown-toggle dropdown-toggle-split' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>

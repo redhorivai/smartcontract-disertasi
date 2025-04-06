@@ -6,15 +6,6 @@ use CodeIgniter\Model;
 
 class PenggunaModel extends Model
 {
-    public function getPengguna()
-    {
-        $query = $this->db->table('users');
-        $query->select('*');
-        $query->where('status_cd', 'normal');
-        $query->orderBy('user_id', 'DESC');
-        $return = $query->get();
-        return $return->getResult();
-    }
     public function getPerson()
     {
         $query = $this->db->table('users a');
@@ -24,5 +15,12 @@ class PenggunaModel extends Model
         $query->orderBy('a.user_id', 'DESC');
         $return = $query->get();
         return $return->getResult();
+    }
+    public function updateData($id,$data)
+    {
+        $query = $this->db->table('users');
+        $query->where('user_id', $id);
+        $query->set($data);
+        return $query->update();
     }
 }
